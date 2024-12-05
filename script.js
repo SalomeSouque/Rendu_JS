@@ -29,6 +29,7 @@ for (let key in data) {
     
     //Header
     nomentreprise.textContent = data.nomCommercial;
+    nomentreprise.className = "entreprise"
     activite.textContent = "Activités";
     temoignage.textContent = "Témoignages";
 
@@ -49,10 +50,12 @@ for (let key in data) {
 
     //mes h2
     let titreactivite = document.createElement ("h2");
+    titreactivite.className = "hdeux"
     titreactivite.textContent = keys[4];
     sectionactivite.appendChild(titreactivite);
 
     let titretemoignage = document.createElement ("h2");
+    titreactivite.className = "hdeux"
     titretemoignage.textContent = keys[5];
     sectiontemoignage.appendChild(titretemoignage);
 

@@ -1,14 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
+    
+        font-family: "Crimson Pro", serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      
+
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #010132;
     color: #333;
+}
+.hdeux{
+     font-family: "Girassol", serif;
+  font-weight: 400;
+  font-style: normal; 
+ 
+}
+
+
+.entreprise{
+    font-family: "Plaster", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header {
     background-color: #6200ea;
-    color: white;
+    color: rgb(8, 0, 0);
     text-align: center;
     padding: 1rem 0;
 }
