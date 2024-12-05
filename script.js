@@ -42,10 +42,12 @@ for (let key in data) {
     sectionhead.appendChild(accroche);
 
 
+    let phrasesclientsWrapper = document.createElement("div");
+    sectionhead.appendChild(phrasesclientsWrapper);
     data.avantagesClients.forEach(element => {
         let phrasesclients = document.createElement("p");
         phrasesclients.textContent = element;
-        sectionhead.appendChild(phrasesclients);
+        phrasesclientsWrapper.appendChild(phrasesclients);
     });
 
     //mes h2
@@ -55,22 +57,30 @@ for (let key in data) {
     sectionactivite.appendChild(titreactivite);
 
     let titretemoignage = document.createElement ("h2");
-    titreactivite.className = "hdeux"
+    titretemoignage.className = "hdeux"
     titretemoignage.textContent = keys[5];
     sectiontemoignage.appendChild(titretemoignage);
 
 
     //Section activité
+    let index = 0;
+    let cardsWrapper = document.createElement("div");
+    cardsWrapper.className = "cardsWrapper"
+    sectionactivite.appendChild(cardsWrapper);
     data.activites.forEach(element => {
+        index++;
         let divactivite = document.createElement("div");
         divactivite.className="card-activite";
-        sectionactivite.appendChild(divactivite);
+        divactivite.id="carte"+index;
+        cardsWrapper.appendChild(divactivite);
 
         let image = document.createElement("img");
+        image.className = "image";
         image.src = element["image-url"];
         divactivite.appendChild(image);
 
         let nomactivite = document.createElement("h3");
+
         nomactivite.textContent = element.nom;
         divactivite.appendChild(nomactivite);
 
@@ -81,11 +91,18 @@ for (let key in data) {
     });
 
     // section témoignages
-    data.temoignages.forEach(element => {
 
+    let temoignageWrapper = document.createElement("div");
+    temoignageWrapper.className = "temoignageWrapper"
+    sectiontemoignage.appendChild(temoignageWrapper);
+
+    let indexdeux = 0
+    data.temoignages.forEach(element => {
+        indexdeux++;
         let divtemoignage = document.createElement("div");
         divtemoignage.className="card-temoignage";
-        sectiontemoignage.appendChild(divtemoignage)
+        divtemoignage.id="cartedeux"+indexdeux;
+        temoignageWrapper.appendChild(divtemoignage)
 
         let prenomtemoin = document.createElement("h3");
         prenomtemoin.textContent = element.prenom;
