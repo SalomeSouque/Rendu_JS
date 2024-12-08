@@ -110,19 +110,36 @@ button{
 
 .card-activite {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
     justify-content: center;
-    padding: 2rem;
+    
     width: 30%;
     flex-direction: column;
     img {
-        width: 100%;
+        margin-top: 5px;
+        width: 97%;
+        
     }
+
 }
 
+#imgindex1{
+    border: #05484C solid 1px;
+}
+#imgindex2{
+    border: #66053E solid 1px;
+}
+#imgindex3{
+    border: #792201 solid 1px;
+}
+
+.activitecontent{
+    padding: 2rem;
+}
 .cardsWrapper{
 display: flex;
 gap: 30px;
+width: 90%;
 }
 
 #carte1{
@@ -146,12 +163,11 @@ gap: 30px;
 ;
     justify-content: center;
     align-items: center;
-}
+
     div{
 
     }
 }
-
 
 .sectionhead {
     margin-bottom: 2rem;
@@ -160,9 +176,6 @@ gap: 30px;
 
 }
 
-image{
-    size: 200px;
-}
 #sectiontemoignage{
     display: flex;
     flex-direction: column;
@@ -170,9 +183,109 @@ image{
 }
 .temoignageWrapper{
     display: flex;
-    
     gap: 30px;
+    flex-direction: column;
+    width: 90%;
 }
+
+.cardTemoignage{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 50px;
+    flex-direction: column;
+    h5{
+       font-size: 15px;
+       margin: 3px;
+    }
+    p{
+        margin: 3px
+    }
+}
+
+.prenomNote{
+    display: flex;
+    gap: 20px;
+    font-family: "Girassol", serif;
+    font-weight: 400;
+    font-style: normal;
+   font-size: 20px;
+   h3{
+    margin : 3px;
+}
+h4{
+    margin : 3px;
+}
+}
+
+#prenomNoteIndex1{
+    color: #05484C;
+}
+
+#prenomNoteIndex2{
+    color : #66053E;
+}
+
+#prenomNoteIndex3{
+    color : #792201;
+}
+
 #cartedeux1{
-    background-color: aqua;
+    background-color: #D7E2E3;
+    color: #05484C;
+}
+
+#cartedeux2{
+    background-color: #F4E7EE;
+    color : #66053E;
+}
+
+#cartedeux3{
+    background-color: #F8E4DD;
+    color : #792201;
+}
+
+footer{
+    width: 100%;
+    padding-top: 100px;
+}
+
+#navbassecontaint{
+    font-family: "Girassol", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    border-top: #4A0505 1px solid;
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+}
+#navligneun{
+    display: flex;
+    gap: 20px;
+}
+#navlignedeux{
+    display: flex;
+    gap: 20px;
+    p{
+        margin: 0;
+    }
+}
+
+
+#nomentreprise{
+    font-family: "Montserrat Subrayada", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #CE3535;
+    font-size: 30px;
+}
+
+#navbasse{
+    display: flex;
+    justify-content: center;
 }

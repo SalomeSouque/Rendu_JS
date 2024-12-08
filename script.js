@@ -64,6 +64,7 @@ for (let key in data) {
 
     //Section activité
     let index = 0;
+    let indeximg =0;
     let cardsWrapper = document.createElement("div");
     cardsWrapper.className = "cardsWrapper"
     sectionactivite.appendChild(cardsWrapper);
@@ -74,19 +75,26 @@ for (let key in data) {
         divactivite.id="carte"+index;
         cardsWrapper.appendChild(divactivite);
 
+        indeximg++
         let image = document.createElement("img");
         image.className = "image";
+        image.id="imgindex"+index;
         image.src = element["image-url"];
         divactivite.appendChild(image);
 
-        let nomactivite = document.createElement("h3");
+        
 
+        let divcontentactivite = document.createElement("div");
+        divcontentactivite.className = "activitecontent"
+        divactivite.appendChild(divcontentactivite);
+
+        let nomactivite = document.createElement("h3");
         nomactivite.textContent = element.nom;
-        divactivite.appendChild(nomactivite);
+        divcontentactivite.appendChild(nomactivite);
 
         let descriptionactivite = document.createElement("p");
         descriptionactivite.textContent = element.description;
-        divactivite.appendChild(descriptionactivite);
+        divcontentactivite.appendChild(descriptionactivite);
 
     });
 
@@ -96,21 +104,32 @@ for (let key in data) {
     temoignageWrapper.className = "temoignageWrapper"
     sectiontemoignage.appendChild(temoignageWrapper);
 
+ 
+
+
     let indexdeux = 0
+    let indextrois = 0
     data.temoignages.forEach(element => {
         indexdeux++;
+        indextrois++;
         let divtemoignage = document.createElement("div");
-        divtemoignage.className="card-temoignage";
+        divtemoignage.className="cardTemoignage";
         divtemoignage.id="cartedeux"+indexdeux;
         temoignageWrapper.appendChild(divtemoignage)
 
+        let prenomNote = document.createElement("div");
+        prenomNote.className = "prenomNote"
+        prenomNote.id="prenomNoteIndex"+indextrois;
+        divtemoignage.appendChild(prenomNote);
+
         let prenomtemoin = document.createElement("h3");
         prenomtemoin.textContent = element.prenom;
-        divtemoignage.appendChild(prenomtemoin);
+        prenomNote.appendChild(prenomtemoin);
 
         let notetemoin = document.createElement("h4");
+        notetemoin.id="note";
         notetemoin.textContent = element.note;
-        divtemoignage.appendChild(notetemoin);
+        prenomNote.appendChild(notetemoin);
 
         let temoinactivite = document.createElement("h5");
         temoinactivite.textContent = element.typeExperience;
